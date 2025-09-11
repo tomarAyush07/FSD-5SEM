@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Ayush Singh Tomar - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #121212;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background: #161616;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #32cd32;
+        }
+
+        .cta-button {
+            background-color: #32cd32;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: 500;
+        }
+
+        .cta-button:hover {
+            background-color: #28a428;
+        }
+
+        .hero-section {
+            text-align: center;
+            padding: 120px 20px 80px; /* padding-top adjusted for fixed navbar */
+            background: linear-gradient(135deg, #1e1e1e, #121212);
+        }
+
+        .hero-content h2 {
+            font-weight: 400;
+            letter-spacing: 2px;
+        }
+
+        .hero-content h1 {
+            font-weight: 600;
+            font-size: 2.5rem;
+            margin: 20px 0;
+        }
+
+        .highlight {
+            color: #32cd32;
+        }
+
+        .hero-content p {
+            max-width: 600px;
+            margin: 0 auto;
+            color: #ccc;
+        }
+
+        .portfolio-button {
+            margin-top: 20px;
+            padding: 10px 30px;
+            background-color: #32cd32;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        .portfolio-button:hover {
+            background-color: #28a428;
+        }
+
+        .about-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 20px;
+            flex-wrap: wrap;
+            background-color: #1a1a1a;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            max-width: 1000px;
+            flex-wrap: wrap;
+        }
+
+        .about-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #32cd32;
+        }
+
+        .about-text {
+            max-width: 600px;
+        }
+
+        .about-text h2 {
+            margin-bottom: 15px;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            color: #ccc;
+        }
+
+        .stats {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            background-color: #2a2a2a;
+            padding: 15px 20px;
+            border-radius: 10px;
+            text-align: center;
+            flex: 1;
+            min-width: 120px;
+        }
+
+        .stat-item span {
+            display: block;
+            font-size: 1.5rem;
+            color: #32cd32;
+            font-weight: 600;
+        }
+
+        .about-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .about-buttons button {
+            padding: 10px 20px;
+            background-color: #32cd32;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        .about-buttons button:hover {
+            background-color: #28a428;
+        }
+
+        .services-section {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: #1a1a1a;
+        }
+
+        .services-section h2 {
+            margin-bottom: 20px;
+        }
+
+        .service-items {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .service-item {
+            background: #2a2a2a;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 250px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(50, 205, 50, 0.3);
+        }
+
+        .service-item h3 {
+            margin-bottom: 10px;
+        }
+
+        .service-item p {
+            color: #ccc;
+        }
+
+        @media (max-width: 768px) {
+            .about-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .about-text {
+                padding: 0;
+            }
+            .stats {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="hero-section">
+        <nav class="navbar">
+            <h1 class="logo">Ayush Singh Tomar</h1>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <button class="cta-button">Let’s Talk</button>
+        </nav>
+
+        <div class="hero-content">
+            <h2>HELLO, I’M A</h2>
+            <h1>Full Stack <span class="highlight">Developer</span>.</h1>
+            <p>Hi! I'm Ayush Singh Tomar, a passionate UI/UX and Frontend developer based in India. Welcome to my portfolio.</p>
+            <button class="portfolio-button">View Portfolio</button>
+        </div>
+    </header>
+
+    <section class="about-section">
+        <div class="about-content">
+            <img src="images.jpeg" alt="Ayush Profile" class="about-img">
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>A story of hard work and perseverance. I specialize in UI/UX design and frontend development, creating visually appealing and user-friendly websites that enhance brand presence and engagement.</p>
+                <div class="stats">
+                    <div class="stat-item"><span>2</span> Years of Experience</div>
+                    <div class="stat-item"><span>10</span> Projects Completed</div>
+                    <div class="stat-item"><span>5</span> Happy Clients</div>
+                </div>
+                <div class="about-buttons">
+                    <button class="hire-button">Hire Me</button>
+                    <button class="cv-button">Download CV</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-section">
+        <h2>Services</h2>
+        <div class="service-items">
+            <div class="service-item">
+                <h3>Website Designing</h3>
+                <p>Crafting user-centered designs for better engagement and experience.</p>
+            </div>
+            <div class="service-item">
+                <h3>Graphic Design</h3>
+                <p>Delivering creative and impactful visual content for brands.</p>
+            </div>
+            <div class="service-item">
+                <h3>UI/UX Development</h3>
+                <p>Designing seamless and intuitive interfaces to improve user interaction.</p>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

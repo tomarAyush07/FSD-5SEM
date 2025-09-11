@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Study Feedback Survey</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f8fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background-color: #ffffff;
+            padding: 30px 40px;
+            border-radius: 8px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333333;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            color: #555555;
+            font-weight: 500;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px 14px;
+            border: 1px solid #cccccc;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            font-size: 1rem;
+            transition: border-color 0.2s ease;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: #007BFF;
+            outline: none;
+        }
+        .checkbox-group label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        .confirmation {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .confirmation input {
+            margin-right: 10px;
+            width: auto;
+        }
+        button {
+            width: 100%;
+            background-color: #007BFF;
+            color: #ffffff;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        @media (max-width: 500px) {
+            .form-container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Survey Form</h2>
+        <form>
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="course">Course Name</label>
+            <input type="text" id="course" name="course" placeholder="Enter your course name" required>
+
+            <label for="age">Age Group</label>
+            <select id="age" name="age" required>
+                <option value="" disabled selected>Select your age group</option>
+                <option value="18-25">18 - 25</option>
+                <option value="26-35">26 - 35</option>
+                <option value="36-50">36 - 50</option>
+                <option value="50+">50+</option>
+            </select>
+            <label for="study-habits">Study Habits</label>
+            <select id="study-habits" name="study-habits" required>
+                <option value="" disabled selected>Select your study habit</option>
+                <option value="Daily">Daily</option>
+                <option value="Several times a week">Several times a week</option>
+                <option value="Once a week">Once a week</option>
+                <option value="Rarely">Rarely</option>
+            </select>
+
+            <label for="satisfaction">How satisfied are you with the course?</label>
+            <select id="satisfaction" name="satisfaction" required>
+                <option value="" disabled selected>Select satisfaction level</option>
+                <option value="Very satisfied">Very satisfied</option>
+                <option value="Satisfied">Satisfied</option>
+                <option value="Neutral">Neutral</option>
+                <option value="Unsatisfied">Unsatisfied</option>
+                <option value="Very unsatisfied">Very unsatisfied</option>
+            </select>
+            <label for="heard">How did you hear about this course?</label>
+            <select id="heard" name="heard" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="Online Ads">Online Ads</option>
+                <option value="Social Media">Social Media</option>
+                <option value="Friend or Family">Friend or Family</option>
+                <option value="Others">Others</option>
+            </select>
+            <label for="feedback">Additional Feedback</label>
+            <textarea id="feedback" name="feedback" rows="4" placeholder="Write your feedback here..."></textarea>
+            <div class="confirmation">
+                <input type="checkbox" id="confirm" name="confirm" required>
+                <label for="confirm">I confirm that the information provided is accurate.</label>
+            </div>
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+</body>
+</html>
