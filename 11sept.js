@@ -1,1 +1,1 @@
- document.getElementById("message").innerHTML ="Hello, welcome to JavaScript!";
+document.getElementById("message").innerHTML ="Hello, welcome to JavaScript!";
