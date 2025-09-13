@@ -21,10 +21,3 @@ document.getElementById("message").onmouseout = function() {
     this.style.color = "blue";
     this.style.transform = "scale(1)";
 };  
-document.getElementById("message").onclick = function() {
-    alert("You clicked the message!");
-};  
-document.getElementById("message").ondblclick = function() {
-    this.style.fontSize = "24px";
-    this.style.fontWeight = "bold";
-}
