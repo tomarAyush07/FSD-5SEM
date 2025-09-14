@@ -24,3 +24,6 @@ document.getElementById("message").onmouseout = function() {
 document.getElementById("message").onclick = function() {
     alert("You clicked the message!");
 }
+document.getElementById("message").ondblclick = function() {
+    this.style.fontWeight = this.style.fontWeight === "bold" ? "normal" : "bold";
+}
