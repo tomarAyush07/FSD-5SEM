@@ -27,3 +27,7 @@ document.getElementById("message").onclick = function() {
 document.getElementById("message").ondblclick = function() {
     this.style.fontWeight = this.style.fontWeight === "bold" ? "normal" : "bold";
 }
+document.getElementById("message").oncontextmenu = function(event) {
+    event.preventDefault();
+    alert("Right-click is disabled on this message.");
+}
