@@ -31,4 +31,12 @@ document.getElementById("message").oncontextmenu = function(event) {
     event.preventDefault();
     alert("Right-click is disabled on this message.");
 }   
+document.getElementById("message").onkeydown = function(event) {
+    if(event.key === "Enter") {
+        alert("You pressed Enter!");
+    }
+    else if(event.key === "Escape") {
+        this.style.display = "none";
+    }   
+};
 
