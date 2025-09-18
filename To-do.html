@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  </style>
+</head>
+<body>
+  <h1>MY TO-DO LIST</h1>
+  <input type="text" placeholder="Enter a task" id="taskInput">
+  <button id="addBtn">Add Task</button>
+  <ul id="taskList"></ul>
+  <script>
+    const taskInput = document.getElementById('taskInput');
+    const addBtn = document.getElementById('addBtn');
+    const taskList = document.getElementById('taskList');
+    addBtn.addEventListener('click',addTask);
+    function addTask(){
+      const taskTest = taskInput.value.trim();
+      if(taskText === ''){
+        alert('Please enter a task name');
+        return;
+      }
+      const li=document.createElement('li');
+
+      const span=document.createElement('span');
+      span.textContent=taskText;
+
+      const tickBtn=document.createElement('button');
+      tickBtn.textContent='✓';
+      tickBtn.className="tickBtn";
+      tickBtn.addEventListener('click',function(){
+        span.clssList.toggle("done");
+      })
+
+      const delBtn=document.createElement('button');
+      delBtn.textContent='Delete';
+      delBtn.className="delBtn";
+      delBtn.addEventListener('click',function(){
+       span.classList.toggle("done");
+      })
+    }
+     
+  </script>
+</body>
+</html>
