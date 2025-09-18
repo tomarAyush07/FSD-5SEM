@@ -3,8 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>My To-Do List</title>
   <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin-top: 40px;
+    }
+    input {
+      padding: 8px;
+      width: 200px;
+    }
+    button {
+      padding: 6px 12px;
+      margin-left: 5px;
+      cursor: pointer;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin-top: 20px;
+    }
+    li {
+      margin: 10px 0;
+    }
+    .done {
+      text-decoration: line-through;
+      color: gray;
+    }
+    .tickBtn {
+      margin-left: 10px;
+      background-color: lightgreen;
+      border: none;
+      padding: 4px 8px;
+    }
+    .delBtn {
+      margin-left: 10px;
+      background-color: rgb(226, 76, 76);
+      border: none;
+      padding: 4px 8px;
+    }
   </style>
 </head>
 <body>
@@ -16,33 +53,35 @@
     const taskInput = document.getElementById('taskInput');
     const addBtn = document.getElementById('addBtn');
     const taskList = document.getElementById('taskList');
-    addBtn.addEventListener('click',addTask);
-    function addTask(){
-      const taskTest = taskInput.value.trim();
-      if(taskText === ''){
+    addBtn.addEventListener('click', addTask);
+    function addTask() {
+      const taskText = taskInput.value.trim(); 
+      if (taskText === '') {
         alert('Please enter a task name');
         return;
       }
-      const li=document.createElement('li');
+      const li = document.createElement('li');
+      const span = document.createElement('span');
+      span.textContent = taskText;
+      const tickBtn = document.createElement('button');
+      tickBtn.textContent = '✓';
+      tickBtn.className = "tickBtn";
+      tickBtn.addEventListener('click', function () {
+        span.classList.toggle("done"); 
+      });
 
-      const span=document.createElement('span');
-      span.textContent=taskText;
-
-      const tickBtn=document.createElement('button');
-      tickBtn.textContent='✓';
-      tickBtn.className="tickBtn";
-      tickBtn.addEventListener('click',function(){
-        span.clssList.toggle("done");
-      })
-
-      const delBtn=document.createElement('button');
-      delBtn.textContent='Delete';
-      delBtn.className="delBtn";
-      delBtn.addEventListener('click',function(){
-       span.classList.toggle("done");
-      })
+      const delBtn = document.createElement('button');
+      delBtn.textContent = 'Delete';
+      delBtn.className = "delBtn";
+      delBtn.addEventListener('click', function () {
+        li.remove();
+      });
+      li.appendChild(span);
+      li.appendChild(tickBtn);
+      li.appendChild(delBtn);
+      taskList.appendChild(li);
+      taskInput.value = ''; 
     }
-     
   </script>
 </body>
 </html>
