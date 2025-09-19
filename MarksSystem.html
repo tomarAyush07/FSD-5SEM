@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Marks System</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+      background: #f9f9f9;
+    }
+    .container {
+      display: flex;
+      align-items: flex-start; 
+      gap: 50px; 
+    }
+    table {
+      border-collapse: collapse;
+      width: 320px;
+      background: white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background: #f2f2f2;
+    }
+    .controls {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      width: 260px;
+    }
+    .button-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr; 
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+    button {
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      background: #6c63ff;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+      width: 100%;
+    }
+    button:hover {
+      background: #4a47c2;
+    }
+    input {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    .info {
+      margin-top: 5px;
+      font-size: 13px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Student Table -->
+    <div>
+      <h2>Student Marks System</h2>
+      <p>A simple interactive demo to practice JavaScript arrays:</p>
+      <table id="studentTable">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Marks</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <p>Total students: <span id="totalCount">0</span></p>
+      <p class="info">Click controls to interact with the data.</p>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+      <div class="button-grid">
+        <button onclick="showHighest()">Show Highest</button>
+        <button onclick="showAverage()">Show Average</button>
+        <button onclick="sortByMarks()">Sort by Marks ↓</button>
+        <button onclick="resetSample()">Reset Sample</button>
+        <button onclick="removeLast()">Remove Last</button>
+      </div>
+      
+      <h4>Add a student</h4>
+      <input type="text" id="studentName" placeholder="Student name">
+      <input type="number" id="studentMarks" placeholder="Marks (0-100)" min="0" max="100">
+      <button onclick="addStudent()">Add Student</button>
+      <p class="info">Tip: Press Enter in the Marks field to add quickly.</p>
+    </div>
+  </div>
+
+  <!-- <script>
+    let students = [
+      {name: "Amit", marks: 85},
+      {name: "Priya", marks: 92},
+      {name: "Rahul", marks: 76},
+      {name: "Sneha", marks: 88},
+      {name: "Karan", marks: 95}
+    ];
+    const tableBody = document.querySelector("#studentTable tbody");
+    const totalCount = document.getElementById("totalCount");
+
+    function renderTable() {
+      tableBody.innerHTML = "";
+      students.forEach(stu => {
+        let row = `<tr><td>${stu.name}</td><td>${stu.marks}</td></tr>`;
+        tableBody.innerHTML += row;
+      });
+      totalCount.textContent = students.length;
+    }
+
+    function showHighest() {
+      if(students.length === 0) return alert("No students!");
+      let maxMarks = Math.max(...students.map(s => s.marks));
+      let topper = students.find(s => s.marks === maxMarks);
+      alert(`Highest: ${topper.name} (${topper.marks})`);
+    }
+
+    function showAverage() {
+      if(students.length === 0) return alert("No students!");
+      let avg = students.reduce((a,b)=>a+b.marks,0) / students.length;
+      alert(`Average Marks: ${avg.toFixed(2)}`);
+    }
+
+    function sortByMarks() {
+      students.sort((a,b)=>b.marks - a.marks);
+      renderTable();
+    }
+
+    function removeLast() {
+      students.pop();
+      renderTable();
+    }
+
+    function resetSample() {
+      students = [
+        {name: "Amit", marks: 85},
+        {name: "Priya", marks: 92},
+        {name: "Rahul", marks: 76},
+        {name: "Sneha", marks: 88},
+        {name: "Karan", marks: 95}
+      ];
+      renderTable();
+    }
+
+    function addStudent() {
+      const name = document.getElementById("studentName").value.trim();
+      const marks = parseInt(document.getElementById("studentMarks").value);
+      if(name === "" || isNaN(marks) || marks < 0 || marks > 100){
+        alert("Enter valid details!");
+        return;
+      }
+      students.push({name, marks});
+      renderTable();
+      document.getElementById("studentName").value = "";
+      document.getElementById("studentMarks").value = "";
+    }
+
+    // Add by pressing Enter in marks field
+    document.getElementById("studentMarks").addEventListener("keypress", function(e){
+      if(e.key === "Enter") addStudent();
+    });
+
+    // Initial render
+    renderTable();
+  </script> -->
+</body>
+</html>

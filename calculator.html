@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      margin-top: 15px;
+      width: 60%;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 8px 12px;
+      text-align: center;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    .delbtn {
+      background-color: rgb(172, 86, 86);
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .delbtn:hover {
+      background-color: darkred;
+    }
+  </style>
+</head>
+<body>
+  <div id="main">
+    <h1>CALCULATOR</h1>
+    <input type="number" id="num1" placeholder="First Number">
+    <input type="number" id="num2" placeholder="Second Number">
+    <br><br>
+    <button onclick="add()">Add</button>
+    <button onclick="subtract()">Subtract</button>
+    <button onclick="multiply()">Multiply</button>
+    <button onclick="divide()">Divide</button>
+
+    <h2>Results:</h2>
+    <table id="resultTable">
+      <thead>
+        <tr>
+          <th>First Number</th>
+          <th>Operation</th>
+          <th>Second Number</th>
+          <th>Result</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+
+    <br>
+    <button onclick="clearAll()">Clear All</button>
+  </div>
+  <script>
+    const num1 = document.getElementById("num1");
+    const num2 = document.getElementById("num2");
+    const tableBody = document.getElementById("tableBody");
+    function add() {
+      const r = parseFloat(num1.value) + parseFloat(num2.value);
+      addRow(num1.value, "+", num2.value, r);
+    }
+    function subtract() {
+      const r = parseFloat(num1.value) - parseFloat(num2.value);
+      addRow(num1.value, "-", num2.value, r);
+    }
+    function multiply() {
+      const r = parseFloat(num1.value) * parseFloat(num2.value);
+      addRow(num1.value, "×", num2.value, r);
+    }
+    function divide() {
+      if (parseFloat(num2.value) === 0) {
+        addRow(num1.value, "÷", num2.value, "Error");
+      } else {
+        const r = parseFloat(num1.value) / parseFloat(num2.value);
+        addRow(num1.value, "÷", num2.value, r);
+      }
+    }
+    function addRow(a, op, b, resultValue) {
+      if (a !== "" && b !== "" && !isNaN(resultValue)) {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td>${a}</td>
+          <td>${op}</td>
+          <td>${b}</td>
+          <td>${resultValue}</td>
+          <td><button class="delbtn">🗑</button></td>
+        `;
+        tr.querySelector(".delbtn").addEventListener("click", function () {
+          tableBody.removeChild(tr);
+        });
+        tableBody.appendChild(tr);
+      }
+    }
+    function clearAll() {
+      num1.value = "";
+      num2.value = "";
+      tableBody.innerHTML = "";
+    }
+  </script>
+</body>
+</html>
