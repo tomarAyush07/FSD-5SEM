@@ -45,4 +45,9 @@ document.getElementById("message").setAttribute("aria-live", "polite"); // Acces
 document.getElementById("message").setAttribute("aria-atomic", "true"); // Accessibility
 document.getElementById("message").setAttribute("aria-relevant", "text"); // Accessibility
 document.getElementById("message").setAttribute("data-info", "welcome-message"); // Custom data attribute
+document.getElementById("message").style.cursor = "pointer"; // Change cursor on hover
+document.getElementById("message").style.userSelect = "none"; // Disable text selection
+document.getElementById("message").style.letterSpacing = "1px"; // Increase letter spacing
+document.getElementById("message").style.wordSpacing = "2px"; // Increase word spacing
+document.getElementById("message").style.lineHeight = "1.5"; // Set line height
 
