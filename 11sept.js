@@ -50,4 +50,9 @@ document.getElementById("message").style.userSelect = "none"; // Disable text se
 document.getElementById("message").style.letterSpacing = "1px"; // Increase letter spacing
 document.getElementById("message").style.wordSpacing = "2px"; // Increase word spacing
 document.getElementById("message").style.lineHeight = "1.5"; // Set line height
+document.getElementById("message").style.textTransform = "uppercase"; // Transform text to uppercase
+document.getElementById("message").style.textShadow = "1px 1px 2px rgba(0, 0, 0, 0.1)"; // Add text shadow
+document.getElementById("message").style.opacity = "0.9"; // Set opacity
+document.getElementById("message").style.zIndex = "10"; // Set z-index
+document.getElementById("message").style.position = "relative"; // Set position
 
