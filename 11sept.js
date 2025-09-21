@@ -39,4 +39,10 @@ document.getElementById("message").onkeydown = function(event) {
         this.style.display = "none";
     }   
 };
+document.getElementById("message").tabIndex = 0; // Make div focusable
+document.getElementById("message").setAttribute("role", "alert"); // Accessibility
+document.getElementById("message").setAttribute("aria-live", "polite"); // Accessibility
+document.getElementById("message").setAttribute("aria-atomic", "true"); // Accessibility
+document.getElementById("message").setAttribute("aria-relevant", "text"); // Accessibility
+document.getElementById("message").setAttribute("data-info", "welcome-message"); // Custom data attribute
 
