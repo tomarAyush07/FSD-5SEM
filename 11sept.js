@@ -52,6 +52,5 @@ document.getElementById("message").style.wordSpacing = "2px"; // Increase word s
 document.getElementById("message").style.lineHeight = "1.5"; // Set line height
 document.getElementById("message").style.textTransform = "uppercase"; // Transform text to uppercase
 document.getElementById("message").style.textDecoration = "underline"; // Underline text
-document.getElementById("message").style.textShadow = "1px 1px 2px gray"; // Add text shadow
 
 
