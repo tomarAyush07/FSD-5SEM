@@ -4,10 +4,10 @@ function App() {
 
   return (
     <>
-     <Car/>
+     <Car example="First"/>
      <h1>testing component behavior</h1>
      <h2>Testing</h2>
-     <Car/>
+     <Car example="Second"/>
     </>
   )
 }
