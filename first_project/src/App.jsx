@@ -4,10 +4,10 @@ function App() {
 
   return (
     <>
-     <Car example="First"/>
+     <Car color="Red" brand="jeep"/>
      <h1>testing component behavior</h1>
      <h2>Testing</h2>
-     <Car example="Second"/>
+     <Car color="Black" brand="Ford"/>
     </>
   )
 }
