@@ -51,6 +51,6 @@ document.getElementById("message").style.letterSpacing = "1px"; // Increase lett
 document.getElementById("message").style.wordSpacing = "2px"; // Increase word spacing
 document.getElementById("message").style.lineHeight = "1.5"; // Set line height
 document.getElementById("message").style.textTransform = "uppercase"; // Transform text to uppercase
-document.getElementById("message").style.textDecoration = "underline"; // Underline text
+
 
 
