@@ -52,8 +52,7 @@ document.getElementById("message").style.wordSpacing = "2px"; // Increase word s
 document.getElementById("message").style.lineHeight = "1.5"; // Set line height
 document.getElementById("message").style.textTransform = "uppercase"; // Transform text to uppercase
 document.getElementById("message").style.textShadow = "2px 2px 4px rgba(0, 0, 0, 0.3)"; // Add text shadow
-document.getElementById("message").style.overflow = "hidden"; // Hide overflow
-document.getElementById("message").style.whiteSpace = "nowrap"; // Prevent text wrapping
+
 
 
 
