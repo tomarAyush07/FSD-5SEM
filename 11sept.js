@@ -49,9 +49,6 @@ document.getElementById("message").style.cursor = "pointer"; // Change cursor on
 document.getElementById("message").style.userSelect = "none"; // Disable text selection
 document.getElementById("message").style.letterSpacing = "1px"; // Increase letter spacing
 document.getElementById("message").style.wordSpacing = "2px"; // Increase word spacing
-document.getElementById("message").style.lineHeight = "1.5"; // Set line height
-document.getElementById("message").style.textTransform = "uppercase"; // Transform text to uppercase
-
 
 
 
