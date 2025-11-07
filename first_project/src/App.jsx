@@ -1,24 +1,11 @@
-// import Car from './Vehicle'
-// import './App.css'
-// function App() {
-
-//   return (
-//     <>
-//      <Car color="Red" brand="jeep"/>
-//      <h1>testing component behavior</h1>
-//      <h2>Testing</h2>
-//      <Car color="Black" brand="Ford"/>
-//     </>
-//   )
-// }
-
-// export default App
-
 import "./App.css"
 import Card from "./Card"
+import Menu from "./Menu";
 
 function App() {
   return(
+    <>
+    <Menu/>
     <div className="card-container">
       <Card
       image="https://marketplace.canva.com/EAGUhHGuQOg/1/0/1003w/canva-orange-and-blue-anime-cartoon-illustrative-novel-story-book-cover-WZE2VIj5AVQ.jpg"
@@ -36,6 +23,7 @@ function App() {
       description="Master the language behind react"
       />
     </div>
+    </>
   )
 }
 export default App;
