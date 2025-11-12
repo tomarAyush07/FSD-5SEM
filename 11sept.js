@@ -48,3 +48,12 @@ document.getElementById("message").setAttribute("data-info", "welcome-message");
 document.getElementById("message").style.cursor = "pointer"; // Change cursor on hover
 document.getElementById("message").style.userSelect = "none"; // Disable text selection
 document.getElementById("message").style.letterSpacing = "1px"; // Adjust letter spacing
+document.getElementById("message").style.lineHeight = "1.5"; // Adjust line height
+document.getElementById("message").style.textShadow = "1px 1px 2px rgba(0, 0, 0, 0.1)"; // Add text shadow'
+document.getElementById("message").style.opacity = "0.9"; // Set initial opacity
+document.getElementById("message").onmouseenter = function() {
+    this.style.opacity = "1.0";
+};
+document.getElementById("message").onmouseleave = function() {
+    this.style.opacity = "0.9";
+};
