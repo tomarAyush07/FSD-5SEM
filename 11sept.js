@@ -57,5 +57,3 @@ document.getElementById("message").onmouseenter = function() {
 document.getElementById("message").onmouseleave = function() {
     this.style.opacity = "0.9";
 };
-document.getElementById("message").style.overflow = "hidden"; // Hide overflow
-document.getElementById("message").style.whiteSpace = "nowrap"; // Prevent text wrapping
