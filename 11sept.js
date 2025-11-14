@@ -54,6 +54,3 @@ document.getElementById("message").style.opacity = "0.9"; // Set initial opacity
 document.getElementById("message").onmouseenter = function() {
     this.style.opacity = "1.0";
 };
-document.getElementById("message").onmouseleave = function() {
-    this.style.opacity = "0.9";
-};
