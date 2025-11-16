@@ -50,3 +50,6 @@ document.getElementById("message").style.userSelect = "none"; // Disable text se
 document.getElementById("message").style.letterSpacing = "1px"; // Adjust letter spacing
 document.getElementById("message").style.lineHeight = "1.5"; // Adjust line height
 document.getElementById("message").style.textShadow = "1px 1px 2px rgba(0, 0, 0, 0.1)"; // Add text shadow'
+document.getElementById("message").style.overflow = "hidden"; // Handle overflow
+document.getElementById("message").style.whiteSpace = "nowrap"; // Prevent text wrapping
+document.getElementById("message").style.textOverflow = "ellipsis"; // Add ellipsis for overflowed text
