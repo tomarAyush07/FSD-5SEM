@@ -55,4 +55,3 @@ document.getElementById("message").style.whiteSpace = "nowrap"; // Prevent text 
 document.getElementById("message").style.textOverflow = "ellipsis"; // Add ellipsis for overflowed text
 document.getElementById("message").style.maxWidth = "100%"; // Ensure responsiveness
 document.getElementById("message").style.boxSizing = "border-box"; // Include padding and border in element's total width and height
-document.getElementById("message").style.zIndex = "10"; // Set z-index for layering
