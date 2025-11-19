@@ -53,4 +53,3 @@ document.getElementById("message").style.textShadow = "1px 1px 2px rgba(0, 0, 0,
 document.getElementById("message").style.overflow = "hidden"; // Handle overflow
 document.getElementById("message").style.whiteSpace = "nowrap"; // Prevent text wrapping
 document.getElementById("message").style.textOverflow = "ellipsis"; // Add ellipsis for overflowed text
-document.getElementById("message").style.maxWidth = "100%"; // Ensure responsiveness
