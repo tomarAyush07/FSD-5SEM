@@ -52,4 +52,3 @@ document.getElementById("message").style.lineHeight = "1.5"; // Adjust line heig
 document.getElementById("message").style.textShadow = "1px 1px 2px rgba(0, 0, 0, 0.1)"; // Add text shadow'
 document.getElementById("message").style.overflow = "hidden"; // Handle overflow
 document.getElementById("message").style.whiteSpace = "nowrap"; // Prevent text wrapping
-document.getElementById("message").style.textOverflow = "ellipsis"; // Add ellipsis for overflowed text
