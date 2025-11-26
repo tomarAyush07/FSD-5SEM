@@ -48,4 +48,3 @@ document.getElementById("message").setAttribute("data-info", "welcome-message");
 document.getElementById("message").style.cursor = "pointer"; // Change cursor on hover
 document.getElementById("message").style.userSelect = "none"; // Disable text selection
 document.getElementById("message").style.overflow = "hidden"; // Hide overflow
-document.getElementById("message").style.textOverflow = "ellipsis"; // Ellipsis for overflow text
