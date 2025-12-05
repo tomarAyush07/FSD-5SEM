@@ -45,4 +45,3 @@ document.getElementById("message").setAttribute("aria-live", "polite"); // Acces
 document.getElementById("message").setAttribute("aria-atomic", "true"); // Accessibility
 document.getElementById("message").setAttribute("aria-relevant", "text"); // Accessibility
 document.getElementById("message").setAttribute("data-info", "welcome-message"); // Custom data attributer
-document.getElementById("message").style.cursor = "pointer"; // Change cursor on hover
