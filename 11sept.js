@@ -44,4 +44,3 @@ document.getElementById("message").setAttribute("role", "alert"); // Accessibili
 document.getElementById("message").setAttribute("aria-live", "polite"); // Accessibility
 document.getElementById("message").setAttribute("aria-atomic", "true"); // Accessibility
 document.getElementById("message").setAttribute("aria-relevant", "text"); // Accessibility
-document.getElementById("message").setAttribute("data-info", "welcome-message"); // Custom data attributer
