@@ -41,3 +41,5 @@ document.getElementById("message").onkeydown = function(event) {
 };
 document.getElementById("message").tabIndex = 0; // Make div focusable
 document.getElementById("message").setAttribute("role", "alert"); // Accessibility
+document.getElementById("message").ariaLive = "polite"; // Accessibility    
+document.getElementById("message").title = "This is a welcome message"; // Tooltip
