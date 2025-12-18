@@ -40,3 +40,7 @@ document.getElementById("message").onkeydown = function(event) {
     }   
 };
 document.getElementById("message").tabIndex = 0; // Make div focusable
+document.getElementById("message").focus();
+document.getElementById("message").title = "This is a welcome message";
+document.getElementById("message").setAttribute("data-info", "welcome-message");
+document.getElementById("message").style.cursor = "pointer";
