@@ -45,4 +45,3 @@ document.getElementById("message").title = "This is a welcome message";
 document.getElementById("message").setAttribute("data-info", "welcome-message");
 document.getElementById("message").style.cursor = "pointer";
 document.getElementById("message").style.outline = "none";
-document.getElementById("message").style.userSelect = "none";
