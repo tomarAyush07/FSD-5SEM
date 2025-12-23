@@ -41,3 +41,4 @@ document.getElementById("message").onkeydown = function(event) {
 };
 document.getElementById("message").tabIndex = 0; 
 document.getElementById("message").focus();
+document.getElementById("message").title = "This is a welcome message";
