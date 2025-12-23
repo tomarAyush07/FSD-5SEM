@@ -39,6 +39,5 @@ document.getElementById("message").onkeydown = function(event) {
         this.style.display = "none";
     }   
 };
-document.getElementById("message").tabIndex = 0; // Make div focusable
+document.getElementById("message").tabIndex = 0; 
 document.getElementById("message").focus();
-document.getElementById("message").title = "This is a welcome message";
