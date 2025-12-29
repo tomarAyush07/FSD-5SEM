@@ -40,4 +40,3 @@ document.getElementById("message").onkeydown = function(event) {
     }   
 };
 document.getElementById("message").tabIndex = 0; 
-document.getElementById("message").focus();
