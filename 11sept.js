@@ -39,7 +39,6 @@ document.getElementById("message").onkeydown = function(event) {
         this.style.display = "none";
     }   
 };
-document.getElementById("message").tabIndex = 0; 
 document.getElementById("message").style.outline = "none";
 document.getElementById("message").setAttribute("role", "button");
 document.getElementById("message").setAttribute("aria-pressed", "false");
