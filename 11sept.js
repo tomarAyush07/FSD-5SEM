@@ -51,3 +51,5 @@ document.getElementById("message").addEventListener("blur", function() {
 document.getElementById("message").addEventListener("click", function() {
     alert(this.getAttribute("data-info"));
 }); 
+document.getElementById("message").setAttribute("data-info", "This is a dynamic message element.");
+document.getElementById("message").style.cursor = "pointer";
