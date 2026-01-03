@@ -48,8 +48,5 @@ document.getElementById("message").addEventListener("focus", function() {
 document.getElementById("message").addEventListener("blur", function() {
     this.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.1)";
 });
-document.getElementById("message").addEventListener("click", function() {
-    alert(this.getAttribute("data-info"));
-}); 
 document.getElementById("message").setAttribute("data-info", "This is a dynamic message element.");
 document.getElementById("message").style.cursor = "pointer";
