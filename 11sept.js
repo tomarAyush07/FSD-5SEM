@@ -39,7 +39,6 @@ document.getElementById("message").onkeydown = function(event) {
         this.style.display = "none";
     }   
 };
-document.getElementById("message").setAttribute("role", "button");
 document.getElementById("message").setAttribute("aria-pressed", "false");
 document.getElementById("message").addEventListener("focus", function() {
     this.style.boxShadow = "0 0 5px 2px rgba(0, 0, 255, 0.5)";
