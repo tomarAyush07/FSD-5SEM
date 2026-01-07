@@ -46,4 +46,3 @@ document.getElementById("message").addEventListener("focus", function() {
 document.getElementById("message").addEventListener("blur", function() {
     this.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.1)";
 });
-document.getElementById("message").setAttribute("data-info", "This is a dynamic message element.");
