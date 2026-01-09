@@ -9,7 +9,6 @@ document.getElementById("message").style.padding = "10px";
 document.getElementById("message").style.borderRadius = "5px";
 document.getElementById("message").style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.1)";
 document.getElementById("message").style.margin = "auto";
-document.getElementById("message").style.transition = "all 0.3s ease";
 document.getElementById("message").onmouseover = function() {
     this.style.backgroundColor = "#e0e0e0";
     this.style.color = "darkblue";
