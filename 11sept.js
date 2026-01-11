@@ -1,5 +1,4 @@
 document.getElementById("message").innerHTML ="Hello, welcome to JavaScript!";
-document.getElementById("message").style.fontSize = "20px";
 document.getElementById("message").style.fontFamily = "Arial, sans-serif";
 document.getElementById("message").style.textAlign = "center";
 document.getElementById("message").style.marginTop = "50px";
