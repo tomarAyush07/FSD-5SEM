@@ -1,7 +1,6 @@
 document.getElementById("message").innerHTML ="Hello, welcome to JavaScript!";
 document.getElementById("message").style.fontFamily = "Arial, sans-serif";
 document.getElementById("message").style.textAlign = "center";
-document.getElementById("message").style.marginTop = "50px";
 document.getElementById("message").style.backgroundColor = "#f0f0f0";
 document.getElementById("message").style.padding = "10px";
 document.getElementById("message").style.borderRadius = "5px";
