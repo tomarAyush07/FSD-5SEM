@@ -1,4 +1,3 @@
-document.getElementById("message").innerHTML ="Hello, welcome to JavaScript!";
 document.getElementById("message").style.fontFamily = "Arial, sans-serif";
 document.getElementById("message").style.textAlign = "center";
 document.getElementById("message").style.backgroundColor = "#f0f0f0";
