@@ -1,5 +1,6 @@
 function myFunction(){
   console.log("starting a task .....");
+  
   setTimeout(() => {
   let sum=0;
   for(let i=0;i<1000000000;i++){
