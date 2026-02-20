@@ -1,0 +1,185 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #f5f6f8;
+  color: #1c1f26;
+}
+
+.dashboard {
+  padding: 60px 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1300px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 600;
+  color: #1f2a44;
+}
+
+.header p {
+  margin: 5px 0 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.search {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #5179b5;
+  width: 220px;
+}
+
+.form-card {
+  background: white;
+  border-radius: 18px;
+  border:1px solid #a9bdee;
+  padding: 30px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.06);
+  margin-bottom: 40px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.full {
+  grid-column: span 3;
+}
+
+input {
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #88a4da;
+  font-size: 14px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #031950;
+}
+
+.button-row {
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+}
+
+.primary {
+  background: #1f3c88;
+  color: white;
+}
+
+.update {
+  background: #b08900;
+  color: white;
+}
+
+.outline {
+  background: transparent;
+  border: 1px solid #cbd5e1;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 25px;
+  
+}
+
+.user-card {
+  background: white;
+  border-radius: 18px;
+  padding: 24px;
+  border: 1px solid #0f214f;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.user-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.badge {
+  background: #1c5b78;
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  color: white;
+  /* padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 12px; */
+}
+
+.card-body p {
+  margin: 6px 0;
+  font-size: 14px;
+  color: #4b5563;
+}
+
+.card-actions {
+  margin-top: 18px;
+  display: flex;
+  gap: 15px;
+}
+
+.link {
+  background: orange;
+  color: ivory;
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+}
+
+.link.danger {
+  background: red;
+  color: ivory;
+}
+
+.empty {
+  text-align: center;
+  padding: 40px;
+  color: #9ca3af;
+  font-size: 15px;
+}
